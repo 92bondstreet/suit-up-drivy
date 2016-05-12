@@ -1,0 +1,221 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+	<head>
+		<title>Drivy Form</title>
+		<meta charset="utf-8"><link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic' rel='stylesheet' type='text/css'>
+		<meta name="description" content="Fancy Sliding Form with jQuery" />
+		<meta name="keywords" content="jquery, form, sliding, usability, css3, validation, javascript"/>
+		<link rel="stylesheet" href="css/reset.css" type="text/css" media="screen">
+		<link rel="stylesheet" href="css/grid.css" type="text/css" media="screen">
+		<link rel="stylesheet" href="css/connection.css" type="text/css" media="screen">
+		<link rel="stylesheet" href="css/formulaire.css" type="text/css" media="screen">
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/jquery-migrate-1.1.1.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+		<script type="text/javascript" src="js/sliding.form.js"></script>     
+
+  <!--[if lt IE 8]><div style='text-align:center'><a href="http://www.microsoft.com/windows/internet-explorer/default.aspx?ocid=ie6_countdown_bannercode"><img src="http://www.theie6countdown.com/img/upgrade.jpg"border="0"alt=""/></a></div><![endif]-->
+  	<!--[if lt IE 9]>
+	   	<script src="js/html5shiv.js"></script>
+	   	<link rel="stylesheet" href="css/ie.css" type="text/css" media="screen">
+	   	<link href='http://fonts.googleapis.com/css?family=Lato:300italic' rel='stylesheet' type='text/css'>
+	   	<link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+	   	<link href='http://fonts.googleapis.com/css?family=Lato:400' rel='stylesheet' type='text/css'>
+	   	<link href='http://fonts.googleapis.com/css?family=Lato:700' rel='stylesheet' type='text/css'>
+    <![endif]-->
+</head>
+
+
+  <style>
+        span.reference{
+            position:fixed;
+            left:5px;
+            top:5px;
+            font-size:10px;
+            text-shadow:1px 1px 1px #fff;
+        }
+        span.reference a{
+            color:#555;
+            text-decoration:none;
+			text-transform:uppercase;
+        }
+        span.reference a:hover{
+            color:#000;
+            
+        }
+        h1{
+            color:#ccc;
+            font-size:30px;
+            text-shadow:1px 1px 1px #fff;
+            padding:25px;
+        }
+    </style>
+
+
+
+<body>
+	<header>
+		<div class="container_12">
+			<div class="grid_12">
+				<div class="wrapper">
+					<a href="formulaire.html" class="logo">Drivy</a>
+					<nav>
+						<ul class="menu">
+							<li><a href="home.html">Home</a></li>
+							<li><a href="contact.html">Contact</a></li>
+							<li class="active"><a href="form.html">Rental</a></li>
+							<li><a href= "signUp.html"> Sign Up </a> </li>
+							<li><a href="#openModal">Login</a></li>
+								<div id="openModal" class="modalDialog">
+								<div>
+									<a href="#close" title="Close" class="close">X</a>
+									<form class="sign-up">
+										<h1 class="sign-up-title">Login to our site</h1>
+										<p>Enter username and password to log on:</p>
+										<input type="text" class="sign-up-input" placeholder="Username..." autofocus>
+										<input type="password" class="sign-up-input" placeholder="Password...">
+										<input type="submit" value="Sign me up!" class="sign-up-button">
+									</form>
+								</div>
+								</div>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</header>
+	
+	
+	 <div id="content">
+            <h1>Drivy Form</h1>
+            <div id="wrapper">
+                <div id="steps">
+                    <form id="formElem" name="formElem" action="" method="post">
+                        <fieldset class="step">
+                            <legend>Account</legend>
+                            <p>
+                                <label for="username">User name</label>
+                                <input id="username" name="username" />
+                            </p>
+                            <p>
+                                <label for="email">Email</label>
+                                <input id="email" name="email" placeholder="info@tympanus.net" type="email" AUTOCOMPLETE=OFF />
+                            </p>
+                            <p>
+                                <label for="password">Password</label>
+                                <input id="password" name="password" type="password" AUTOCOMPLETE=OFF />
+                            </p>
+                        </fieldset>
+                        <fieldset class="step">
+                            <legend>Choice</legend>
+							<p>
+                                <label for="model">Car Model</label>
+                                <select id="model" name="model">
+                                    <option value="Daily" selected>Peugeot 306</option>
+                                    <option value="Weekly">RR-Sport</option>
+                                    <option value="Monthly">P-Boxten</option>
+                                    <option value="Never">Select</option>
+                                </select>
+                            </p>
+                            <p>
+                                <label for="price-by-day">Price by day</label>
+								<input id="price-by-day" name="price-by-day" type="number" AUTOCOMPLETE=OFF />
+                            </p>
+							<p>
+                                <label for="price-by-km">Price by km</label>
+                                <input id="price-by-km" name="price-by-km" type="number" AUTOCOMPLETE=OFF />
+                            </p>
+                        </fieldset>
+                        <fieldset class="step">
+                            <legend>Settings</legend>	
+							<p>
+								<label for="dateDebut">Rental begin date :</label>
+								<input type="text" name="dateDebut" id="datetimepicker6" />
+							</p>
+							<p>
+								<label for="dateFin">Rental end date</label>
+								<input type="text" name="date" id="datetimepicker7"/>
+							</p>
+     
+							<p>
+                                <label for="distance">Distance in km</label>
+                                <input id="distance" name="distance" type="number" AUTOCOMPLETE=OFF />
+                            </p>
+							<p>
+							<label for="option">Deductible option</label>
+							<input id="option" type="checkbox" placeholder="Deductible option"/>
+							</p>
+                        </fieldset>
+						<fieldset class="step">
+                            <legend>Payment</legend>
+								 <p>
+                                <label for="cardtype">Card</label>
+                                <select id="cardtype" name="cardtype">
+                                    <option>Visa</option>
+                                    <option>Mastercard</option>
+                                    <option>American Express</option>
+                                </select>
+                            </p>
+                            <p>
+                                <label for="cardnumber">Card number</label>
+                                <input id="cardnumber" name="cardnumber" type="number" AUTOCOMPLETE=OFF />
+                            </p>
+                            <p>
+                                <label for="secure">Security code</label>
+                                <input id="secure" name="secure" type="number" AUTOCOMPLETE=OFF />
+                            </p>
+                            <p>
+                                <label for="namecard">Name on Card</label>
+                                <input id="namecard" name="namecard" type="text" AUTOCOMPLETE=OFF />
+                            </p>
+                        </fieldset>
+                        <fieldset class="step">
+                            <legend>Validation</legend>
+								<p>
+								Everything in the form was correctly filled 
+								if all the steps have a green checkmark icon.
+								</p>
+								 <p class="submit">
+                                <button id="registerButton" type="submit">Register</button>
+								</p>	
+                        </fieldset>
+                    </form>
+                </div>
+                <div id="navigation" style="display:none;">
+                    <ul>
+                        <li class="selected">
+                            <a href="#">Account</a>
+                        </li>
+                        <li>
+                            <a href="#">Choice</a>
+                        </li>
+                        <li>
+                            <a href="#">Settings</a>
+                        </li>
+                        <li>
+                            <a href="#">Payment</a>
+                        </li>
+						<li>
+                            <a href="#">Validation</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+	<script id="template" type="x-tmpl-mustache">
+      {{#actors}}
+        <div class="actor">
+          <span>{{who}}</span>
+          <span>{{type}}</span>
+          <span>{{amount}}</span>
+        </div>
+      {{/actors}}
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
+    <script src="drivy.js"></script>
+    <script src="index.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>
