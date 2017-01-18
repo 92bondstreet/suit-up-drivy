@@ -3,11 +3,13 @@
   <head>
     <title>CSS/HTML Workshop with Drivy</title>
 	<link rel="stylesheet" href="style.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
   </head>
   <body>
-  <center><h1>Input Title</h1></center>
+	<img src="logo-drivy.png"/>
+	<h1>Welcome to the Drivy Price Simulator</h1>
 	
-    <div id="car">
+    <div id="car" >
       <input class="model" type="text" placeholder="Car model"/>
       <input class="price-by-day" type="number" placeholder="Price by day"/>
       <input class="price-by-km" type="number" placeholder="Price by km"/>
@@ -18,7 +20,8 @@
       <input class="distance" type="number" placeholder="Distance in km"/>
       <input class="option" type="checkbox" placeholder="Deductible option"/>
     </div>
-    <button id="compute">Compute</button>
+	<p> </p>
+    <button id="compute" class="button">Compute</button>
     <div id="actors"></div>
     <script id="template" type="x-tmpl-mustache">
       {{#actors}}
