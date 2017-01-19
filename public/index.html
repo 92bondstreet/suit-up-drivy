@@ -2,9 +2,15 @@
 <html>
   <head>
     <title>CSS/HTML Workshop with Drivy</title>
+	<link rel="stylesheet" href="style.css" />
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
   </head>
   <body>
-    <div id="car">
+	<img src="logo-drivy.png"/>
+	<h1>Welcome to the Drivy Price Simulator</h1>
+	
+    <div id="car" >
       <input class="model" type="text" placeholder="Car model"/>
       <input class="price-by-day" type="number" placeholder="Price by day"/>
       <input class="price-by-km" type="number" placeholder="Price by km"/>
@@ -13,16 +19,22 @@
       <input class="begin" type="date" placeholder="Rental begin date"/>
       <input class="end" type="date" placeholder="Rental end date"/>
       <input class="distance" type="number" placeholder="Distance in km"/>
-      <input class="option" type="checkbox" placeholder="Deductible option"/>
+	  <center><div class="cbox1">
+      <input class="option" id="cbox" type="checkbox" placeholder="Deductible option"/>
+	  <label for="cbox"></label>
+	  </div></center>
     </div>
-    <button id="compute">Compute</button>
-    <div id="actors"></div>
+	<p> </p>
+    <button id="compute" class="button">Compute</button>
+	<div> </div>
+	<div> </div>
+    <div id="actors" class="test"> </div>
     <script id="template" type="x-tmpl-mustache">
       {{#actors}}
         <div class="actor">
-          <span>{{who}}</span>
-          <span>{{type}}</span>
-          <span>{{amount}}</span>
+        <span>{{who}}</span>
+        <span>{{type}}</span>
+        <span> : {{amount}}</span>
         </div>
       {{/actors}}
     </script>
