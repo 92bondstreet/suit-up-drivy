@@ -2,6 +2,8 @@
 <html>
   <head>
     <title>CSS/HTML Workshop with Drivy</title>
+    <link rel="stylesheet" href="styleWS2.css"/>
+    <script src="http://storage.googleapis.com/code.getmdl.io/1.0.1/material.min.js"></script>
   </head>
   <body>
     <div id="car">
@@ -15,6 +17,37 @@
       <input class="distance" type="number" placeholder="Distance in km"/>
       <input class="option" type="checkbox" placeholder="Deductible option"/>
     </div>
+    <div id="cars" class="mdl-grid"></div>
+    <script id="templateCars" type="mustache/x-tmpl">
+      {{#cars}}
+        <div class="mdl-card mdl-cell mdl-cell--3_col mdl-shadow--2dp">
+          <div class = "mdl-card_title">
+            <h2 class = "mdl-card_title-text">{{name}}</h2>
+          </div>
+          <div>
+            <img class = "card-img" src = {{img}} alt ="">
+          </div>
+          <div class = "mdl-card_supporting-text">
+            <div class = "mdl-grid text-center padding-none">
+              <div class = "mdl-cell mdl-cell--6-col">
+                <span class = "price-tag">{{pricePerDay}} € </span>
+                <span> price per day </span>
+              </div>
+              <div class = "mdl-cell mdl-cell--6-col">
+                <span class = "price-tag">{{pricePerKm}} € </span>
+                <span> price per km </span>
+              </div>
+            </div>
+          </div>
+          <div class = "mdl-card_actions mdl-card--border">
+            <button data-selected-car ={{id}} class = "mdl-button mdl-button--colored mdl-js-button">
+              Let s Go !
+            </button>
+          </div>
+        </div>
+      {{/cars}}
+    </script>
+    
     <button id="compute">Compute</button>
     <div id="actors"></div>
     <script id="template" type="x-tmpl-mustache">
@@ -26,7 +59,7 @@
         </div>
       {{/actors}}
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
+    <script src="mustache.js"></script>
     <script src="drivy.js"></script>
     <script src="index.js"></script>
   </body>

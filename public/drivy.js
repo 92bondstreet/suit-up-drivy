@@ -2,10 +2,43 @@
 'use strict';
 
 var DRIVY = DRIVY || {};
+var cars = [{
+    'id': 'p306',
+    'img' : 'peugeot306.jpg',
+    'name': 'peugeot',
+    'pricePerDay': 20,
+    'pricePerKm': 0.10
+  }, {
+    'id': 'rr-sport',
+    'img' : 'range rover.jpg',
+    'name': 'range rover sport',
+    'pricePerDay': 60,
+    'pricePerKm': 0.30
+  }, {
+    'id': 'p-boxster',
+    'img' : 'porshe boxster.jpg',
+    'name': 'porshe boxster',
+    'pricePerDay': 100,
+    'pricePerKm': 0.45
+  },{
+    'id' : 'aA1',
+    'img' : 'A1.jpg',
+    'name': 'audi A1',
+    'pricePerDay': 50,
+    'pricePerKm': 0.20
 
+  },{
+    'id': 's-fortwo',
+    'img' : 'smart.jpg',
+    'name': 'smart fortwo',
+    'pricePerDay': 15,
+    'pricePerKm': 0.10
+  }
+
+  ];
 DRIVY = (function namespace () {
   var MS_PER_DAY = 1000 * 60 * 60 * 24;
-
+  
   /**
    * Get car information
    *
